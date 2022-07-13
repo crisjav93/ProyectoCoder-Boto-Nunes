@@ -10,10 +10,10 @@
     <h1>Formulario de Profes</h1>
 
     {% if formulario.errors %}
-     <p style="color:red">"HAY ALGO MAL"</p>
-     {% endif %}
+    <p style="color:red">"HAY ALGO MAL"</p>
+    {% endif %}
 
-    <from action="{% url 'profeFormulario' %}" method="POST"> {% csrf_token %}
+    <form action="{% url 'profeFormulario' %}" method="POST"> {% csrf_token %}
 
         <table>
             {{ formulario.as_table }}
@@ -22,7 +22,7 @@
         <input type="submit" value="Enviar">
 
 
-    </from>
+    </form>
     
 </body>
 </html>
