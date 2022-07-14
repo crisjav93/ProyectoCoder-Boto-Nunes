@@ -12,6 +12,10 @@ urlpatterns = [
     path('cursoFormulario/',cursoFormulario,name="cursoFormulario"),
     path('estudianteFormulario/',estudiantesFormulario,name='estudianteFormulario'),
     path('perroFormulario/',perroFormulario, name ='perroFormulario'),
+    path('busquedaComision/', busquedaComision, name = 'busquedaComision'),
+    path('buscar/', buscarCurso, name = 'buscarCurso'),
+    path('busquedaProfe/',busquedaProfe, name = 'busquedaProfe'),
+    path('buscarProfe/',buscarProfe, name='buscarProfe'),
  
  
 ]

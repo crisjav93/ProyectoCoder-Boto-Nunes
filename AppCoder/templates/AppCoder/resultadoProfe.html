@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset ='UFT-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial - scale=1.0">
+    <title>Resultado de Busqueda</title>
+</head>
+<body>
+
+    <h1>RESULTADOS DE LA BUSQUEDA</h1>
+    {% if apellido %}
+    
+    <ul>
+    {% for ape in apellido %}
+        <li>{{ ape.nombre }}</li>
+        <li>{{ ape.apellido }}</li>
+        <li>{{ ape.profesion }}</li>
+    {% endfor %}
+    
+    </ul>    
+    {% else %}
+        <p>No hay profesores con esa descripcion!!</p>
+    {% endif %}
+</body>
+</html>

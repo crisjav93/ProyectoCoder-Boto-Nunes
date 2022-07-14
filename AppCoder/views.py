@@ -73,3 +73,25 @@ def perroFormulario(request):
     else:
         form=PerroForm()
     return render(request,'Appcoder/perroFormulario.html',{'formulario':form})
+
+def busquedaComision(request):
+    return render(request, 'Appcoder/busquedaComision.html')
+
+def buscarCurso(request):
+    if request.GET['comision']:
+        comi= request.GET['comision']
+        cursos = Curso.objects.filter(comision=comi) 
+        return render(request,'AppCoder/resultadoCurso.html', {'cursos':cursos})
+    else:
+        return render(request,'AppCoder/busquedaComision.html', {'error':'No se ingreso ninguna comision'})
+
+def busquedaProfe(request):
+    return render(request, 'Appcoder/busquedaProfe.html')
+
+def buscarProfe(request):
+    if request.GET['apellido']:
+        ape= request.GET['apellido']
+        apellido = Profesor.objects.filter(apellido=ape) 
+        return render(request,'AppCoder/resultadoProfe.html', {'apellido':apellido})
+    else:
+        return render(request,'AppCoder/busquedaProfe.html', {'error':'No se ingreso ningun Profesor'})
